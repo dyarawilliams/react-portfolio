@@ -1,0 +1,212 @@
+@import url('https://fonts.cdnfonts.com/css/gumela');
+
+/* ======= Variables CSS ========== */
+:root {
+  --header-height: 4.5rem;
+  --width: 968px;
+
+  /* ============ Colors ============== */
+  --primary-color: #FE74AB;
+  --secondary-color: #788097;
+
+  --hue: 0;
+  --sat: 0%;
+  --title-color: hsl(var(--hue), var(--sat), 20%);
+  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
+  --text-color: hsl(var(--hue), var(--sat), 46%);
+  --body-color: hsl(var(--hue), var(--sat), 98%);
+  --container-color: #fff;
+
+  --yellow: #F5C32C;
+  --orange: #fca61f;
+  --black: #342D49;
+  --gray: #788097;
+  --blueCard: #DDF8FE;
+  --purple: rgb(108, 45, 148);
+  --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
+  --orangeCard: rgb(252, 166, 31, 0.45);
+  --smboxShadow: -79px 51px 60px rgb(0, 0, 0, 0.08);
+
+  /* ============ Font & Typography ============ */
+--body-font:'Gumela', sans-serif;
+
+/* .5rem = 8px | 1rem = 16px ...  */
+--big-font-size: 3.5rem;
+--h1-font-size: 2.5rem;
+--h2-font-size: 2rem;
+--h3-font-size: 1.5rem;
+--normal-font-size: 1rem;
+--small-font-size: 0.875rem;
+--smaller-font-size: 0.813rem;
+--tiny-font-size: 0.625rem;
+
+--font-normal: 400;
+--font-medium: 500;
+--font-semi-bold: 600;
+
+/*=========== Margin Bottom ==================*/
+--mb-0-25: 0.25rem;
+--mb-0-5: 0.5rem;
+--mb-0-75: 0.75rem;
+--mb-1: 1rem;
+--mb-1-5: 1.5rem;
+--mb-2: 2rem;
+--mb-2-5: 2.5rem;
+--mb-3: 3rem;
+
+/*========== Z index =============*/
+--z-tooltip: 10;
+--z-fixed: 100;
+--z-modal: 1000;
+}
+
+/*============= Base  ====================*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, button, input, textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  width: 100vw;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*============= Reusable CSS CLASSES  ==============*/
+
+.section {
+  padding: 6rem 0 2rem;
+}
+
+.section_title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: 4rem;
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+.blur {
+  width: 21rem;
+  height: 11rem;
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(212px);
+}
+
+.s-blur1 {
+  top: 13rem;
+  left: -18rem;
+}
+
+.s-blur2 {
+  left: 14rem;
+  top: 8rem;
+}
+
+/*================== LAYOUT  =================*/
+.container {
+  width: var(--width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/*============= BUTTONS  ==============*/
+.btn {
+  width: 15rem;
+  padding: 1rem 1.75rem;
+  display: inline-block;
+  text-align: center;
+  border-radius: 2rem;
+  border: none; 
+  color: white;
+  font-weight: var(--font-medium);
+  background: linear-gradient(180deg, var(--primary-color), var(--secondary-color) 99.57%);
+  box-shadow: 0px 20px 24px 3px rgba(254, 116, 171, 0.42);
+}
+
+.btn:hover {
+  background-color: white;
+  cursor: pointer;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+/*=========== BREAKPOINTS ============*/
+/* For Large Devices */
+@media screen and (max-width: 992px) {
+  .container {
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+  }
+}
+
+/* For Medium Devices  */
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0 0 var(--header-height) 0;
+  }
+
+  .section {
+    padding: 2rem 0 4rem;
+  }
+
+  .section__subtitle {
+    margin-bottom: var(--mb-3);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  :root {
+    --big-font-size: 2.25rem;
+  }
+
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+}
