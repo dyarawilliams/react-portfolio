@@ -143,6 +143,7 @@ img {
 }
 
 /*================== LAYOUT  =================*/
+
 .container {
   max-width: var(--width);
   margin-left: auto;

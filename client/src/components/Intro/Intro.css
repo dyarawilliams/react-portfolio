@@ -1,5 +1,9 @@
-.intro__container {
+.intro {
     height: 100vh;
+}
+
+.intro__container {
+    height: 100%;
 }
 
 .intro__content {
