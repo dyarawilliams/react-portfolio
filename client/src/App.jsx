@@ -35,6 +35,7 @@ const App = () => {
       : `bg-linear-to-br from-gray-50 to-slate-50 min-h-screen`
       }>
           <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+          <Hero />
     </div>
   )
 }
