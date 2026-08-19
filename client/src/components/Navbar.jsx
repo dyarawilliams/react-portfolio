@@ -23,7 +23,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         transition={{ duration: 0.5 }}
         className='relative w-[95%] max-w-4xl mb-4'
       >
-        <div className='relative bg-linear-to-r from-slate-600 to-slate-800 backdrop-blur-xl rounded-2xl border border-white/20 px-3.5 py-4.5'>
+        <div className='relative bg-linear-to-r from-slate-600 to-slate-800 backdrop-blur-xl rounded-2xl border border-white/20 xs:px-2 xs:py-3 px-3 py-4'>
           <div className='absolute -top-5 right-3'>
             <motion.button
               whileHover={{ scale: 1.1 }}
@@ -56,7 +56,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                       transition={{ duration: 0.3 }}></motion.div>
                   )}
                   <Icon className={`w-5 h-5 transition-all duration-300 ${isActive ? 'text-white' : 'text-white/70'}`} />
-                  <span className={`text-[14px] font-medium transition-all duration-300
+                  <span className={`max-[640px]:text-xs text-[14px] font-medium transition-all duration-300
                     ${isActive
                       ? 'text-white'
                       : 'text-white/60 group-hover:text-white'
