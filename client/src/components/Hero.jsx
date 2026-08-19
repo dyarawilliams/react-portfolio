@@ -18,7 +18,7 @@ const Hero = () => {
           <div className='lg:w-2/5 w-full flex justify-center' data-aos='fade-right'>
             <div className='relative group'>
               <div className='absolute inset-0 bg-linear-to-r from-slate-600 to-slate-800 rounded-full filter blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500' />
-              <div className='relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96'>
+              <div className='relative w-50 h-50 xs:w-65 xs:h-65 md:w-80 md:h-80 lg:w-96 lg:h-96'>
                 <img src={hero} alt="hero" className='w-full h-full object-cover rounded-full relative z-10 transform group-hover:scale-105 transition-transform duration-500' />
                 <div className='absolute inset-0 border-2 border-slate-500/30 rounded-full scale-110 group-hover:scale-125 transition-transform duration-500' />
                 <div className='absolute inset-0 border-2 border-slate-500/30 rounded-full scale-125 group-hover:scale-150 transition-transform duration-500' />
