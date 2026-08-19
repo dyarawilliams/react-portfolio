@@ -27,7 +27,7 @@ const Hero = () => {
           </div>
           <div className='lg:w-3/5 w-full flex flex-col items-center lg:items-start text-center lg:text-left' data-aos='fade-left'>
             <div className='inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-500/10 border border-slate-500/20 mb-5'>
-              <span className='w-2 h-2 rounded-full bg-slate-500 animate-pulse' />
+              <span className='w-2 h-2 rounded-full bg-green-500 animate-pulse' />
               <span className='text-sm font-medium dark:text-slate-300 text-gray-700'>Available for work</span>
             </div>
             <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-3 dark:text-white text-gray-900'>
