@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+    --breakpoint-xs: 30rem;
+}
+
 html {
     scroll-behavior: smooth;
 }

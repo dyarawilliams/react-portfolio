@@ -26,19 +26,19 @@ const Hero = () => {
             </div>
           </div>
           <div className='lg:w-3/5 w-full flex flex-col items-center lg:items-start text-center lg:text-left' data-aos='fade-left'>
-            <div className='inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-500/10 border border-slate-500/20 mb-5'>
+            <div className='inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-200/80 border border-slate-300 text-gray-700 dark:bg-slate-800/60 dark:border-slate-700 dark:text-slate-200 mb-5'>
               <span className='w-2 h-2 rounded-full bg-green-500 animate-pulse' />
-              <span className='text-sm font-medium dark:text-slate-300 text-gray-700'>Available for work</span>
+              <span className='text-sm font-medium text-gray-700 dark:text-slate-200'>Available for work</span>
             </div>
-            <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-3 dark:text-white text-gray-900'>
+            <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-3 text-gray-900 dark:text-slate-100'>
               Hi, I'm <span className='text-yellow-500'>D'yara</span>
             </h1>
-            <h2 className='text-xl sm:text-2xl font-mono mb-4 dark:text-slate-400 text-slate-600'>
-              <span className='text-gray-400 dark:text-gray-500'>&lt; </span>
-              Software Engineer
-              <span className='text-gray-400 dark:text-gray-500'> &gt;</span>
+            <h2 className='text-xl sm:text-2xl font-mono mb-4 text-gray-700 dark:text-slate-300'>
+              <span className='text-gray-500 dark:text-slate-400'>&lt; </span>
+              Software Engineer /
+              <span className='text-gray-500 dark:text-slate-400'> &gt;</span>
             </h2>
-            <p className='mb-6 leading-relaxed max-w-md lg:max-w-lg dark:text-gray-300 text-gray-700'>
+            <p className='mb-6 leading-relaxed max-w-md lg:max-w-lg text-gray-700 dark:text-slate-300'>
               I specialize in building web applications that are not only functional but also visually appealing. My goal is to create seamless user experiences through clean and efficient code.
             </p>
             <div className='flex gap-8 mb-7'>
@@ -48,25 +48,28 @@ const Hero = () => {
                 { number: '5+', label: 'Happy Clients' },
               ].map((stat, index) => (
                 <div key={index} className='text-center'>
-                  <div className='text-2xl font-bold dark:text-white text-gray-900'>{stat.number}</div>
-                  <div className='text-xs dark:text-gray-400 text-gray-600'>{stat.label}</div>
+                  <div className='text-2xl font-bold text-gray-900 dark:text-slate-100'>{stat.number}</div>
+                  <div className='text-xs text-gray-500 dark:text-slate-400'>{stat.label}</div>
                 </div>
               ))}
             </div>
             <div className='flex flex-col sm:flex-row gap-4 w-full sm:w-auto'>
-              <a href={CV} target='_blank'className='w-full sm:w-auto bg-slate-500 hover:bg-slate-600 text-white font-medium py-2 px-4 rounded-full transition-colors duration-300'>
-                <button className='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full text-white font-semibold bg-linear-to-r from-slate-600 via-[#203584] to-slate-800 hover:shadow-[0_0_40px_rgba(234,179,8,0.7)] transition-all duration-300 transform hover:scale-105'>
-                  <Eye size={18} />
-                  View Resume
-                </button>
+              <a
+                href={CV}
+                target='_blank'
+                rel='noreferrer'
+                className='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full text-white dark:text-white font-semibold bg-linear-to-r from-slate-700 via-[#203584] to-slate-900 hover:shadow-[0_0_40px_rgba(234,179,8,0.7)] transition-all duration-300 transform hover:scale-105 border border-slate-600'
+              >
+                <Eye size={18} />
+                View Resume
               </a>
-              <a href='#contact' className='w-full sm:w-auto bg-slate-500 hover:bg-slate-600 text-white font-medium py-2 px-4 rounded-full transition-colors duration-300'>
-                <button className='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full border-2 dark:border-slate-500 border-slate-600 dark:text-white text-gray-800 font-semibold dark:hover:bg-slate-500 hover:bg-slate-600 hover:shadow-[0_0_40px_rgba(234,179,8,0.7)] transition-all duration-300 transform hover:scale-105'>
-                  <Mail size={18} />
-                  Hire Me
-                </button>
+              <a
+                href='#contact'
+                className='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full border-2 border-slate-700 bg-slate-100/80 text-gray-800 dark:border-slate-500 dark:bg-slate-800/60 dark:text-slate-100 dark:hover:bg-slate-700 hover:bg-slate-200 hover:shadow-[0_0_40px_rgba(234,179,8,0.7)] transition-all duration-300 transform hover:scale-105 font-semibold'
+              >
+                <Mail size={18} />
+                Hire Me
               </a>
-              
             </div>
           </div>
         </div>
