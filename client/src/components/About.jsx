@@ -40,7 +40,7 @@ const About = () => {
             <div className='max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10'>
                 <div className='order-2 lg:order-1 flex flex-col items-center lg:items-start text-center lg:text-left' data-aos='fade-right'>
                     <div className='inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-200/80 border border-slate-300 text-gray-700 dark:bg-slate-800/60 dark:border-slate-700 dark:text-slate-200 mb-4'>
-                        <span className='w-2 h-2 rounded-full bg-slate-500 animate-pulse'></span>
+                        <span className='w-2 h-2 rounded-full bg-yellow-500 animate-pulse'></span>
                         <span className='text-xs sm:text-sm font-semibold tracking-wider uppercase'>About Me</span>
                     </div>
                     <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-slate-100 leading-tight'>Turning Ideas into
