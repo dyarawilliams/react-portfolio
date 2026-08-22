@@ -6,7 +6,7 @@ import Hero from './components/Hero';
 // import About from './components/About';
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     AOS.init({
