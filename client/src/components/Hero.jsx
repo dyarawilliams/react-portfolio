@@ -36,7 +36,7 @@ const Hero = () => {
             <h2 className='text-xl sm:text-2xl font-mono mb-4 text-gray-700 dark:text-slate-300'>
               <span className='text-gray-500 dark:text-slate-400'>&lt; </span>
               Software Engineer /
-              <span className='text-gray-500 dark:text-slate-400'> &gt;</span>
+              <span className='text-gray-500 dark:text-slate-400'>&gt;</span>
             </h2>
             <p className='mb-6 leading-relaxed max-w-md lg:max-w-lg text-gray-700 dark:text-slate-300'>
               I specialize in building web applications that are not only functional but also visually appealing. My goal is to create seamless user experiences through clean and efficient code.
