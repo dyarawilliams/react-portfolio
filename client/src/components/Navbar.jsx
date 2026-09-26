@@ -23,7 +23,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         transition={{ duration: 0.5 }}
         className='relative w-[95%] max-w-4xl mb-4'
       >
-        <div className='relative bg-slate-700/95 backdrop-blur-xl rounded-2xl border border-slate-500/80 shadow-[0_0_30px_rgba(15,23,42,0.3)] dark:bg-slate-900/80 dark:border-slate-700/70 xs:px-2 xs:py-3 px-3 py-4'>
+        <div className='relative bg-slate-700/95 backdrop-blur-xl rounded-2xl border border-slate-500/80 dark:bg-slate-900/80 dark:border-slate-700/70 xs:px-2 xs:py-3 px-3 py-4'>
           <div className='absolute -top-5 right-3'>
             <motion.button
               whileHover={{ scale: 1.1 }}
