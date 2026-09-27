@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { FaHome, FaUser, FaCode, FaCertificate, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
-import { Sun, Moon } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Sun, Moon, X, Menu } from 'lucide-react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
-  const [activeTab, setActiveTab] = useState('Home');
+  const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
     { name: 'Home', link: '#home', icon: FaHome },
@@ -16,59 +16,88 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   ];
 
   return (
-    <div className='fixed z-50 bottom-0 left-0 right-0 flex justify-center'>
+    <div className='fixed z-50 w-full mt-4 flex justify-center'>
       <motion.nav
-        initial={{ y: 100 }}
+        initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className='relative w-[95%] max-w-4xl mb-4'
+        className='relative bg-white/85 dark:bg-linear-to-br dark:from-slate-950 dark:to-black backdrop-blur-xl rounded-2xl shadow-2xl px-6 py-3 w-[90%] max-w-4xl border border-slate-200/80 dark:border-gray-700/50'
       >
-        <div className='relative bg-slate-700/95 backdrop-blur-xl rounded-2xl border border-slate-500/80 dark:bg-slate-900/80 dark:border-slate-700/70 xs:px-2 xs:py-3 px-3 py-4'>
-          <div className='absolute -top-5 right-3'>
+        <div className='flex items-center justify-between'>
+          <motion.a
+            href='/'
+            whileHover={{ scale: 1.05 }}
+            className='text-2xl font-bold bg-linear-to-r from-yellow-600 to-amber-700 dark:to-white bg-clip-text text-transparent'
+          >
+            DW<span className='text-gray-800 dark:text-white'>.</span>
+          </motion.a>
+          <div className='hidden md:flex items-center gap-6'>
+            {navItems.map((item) => (
+              <a
+                key={item.link}
+                href={item.link}
+                className='text-gray-700 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400 transition-colors font-medium'
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+          <div className='flex items-center gap-2'>
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={toggleDarkMode}
               aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-              className='p-2 rounded-full bg-slate-800 text-slate-100 shadow-lg transition-colors backdrop-blur-sm dark:bg-slate-700 dark:text-slate-100'>
+              className='p-2 rounded-full bg-amber-100 text-amber-900 shadow-lg transition-colors backdrop-blur-sm hover:bg-amber-200 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600'>
               {darkMode ? (
-                <Sun className='w-5 h-5 text-slate-800 dark:text-slate-100' />
+                  <Sun className='w-5 h-5' />
               ) : (
-                <Moon className='w-5 h-5 text-slate-100' />
+                  <Moon className='w-5 h-5' />
+              )}
+            </motion.button>
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              onClick={() => setIsOpen(!isOpen)}
+              className='md:hidden p-2 rounded-lg bg-slate-100 dark:bg-gray-800 hover:bg-slate-200 dark:hover:bg-gray-700 transition-colors'
+            >
+              {isOpen ? (
+                <X className='w-5 h-5 text-gray-700 dark:text-white' />
+              ) : (
+                <Menu className='w-5 h-5 text-gray-700 dark:text-white' />
               )}
             </motion.button>
           </div>
-          <div className='flex items-center justify-around gap-1'>
-            {navItems.map((item) => {
-              const Icon = item.icon;
-              const isActive = activeTab === item.name;
-              return (
-                <motion.a
-                  key={item.name}
-                  href={item.link}
-                  onClick={() => setActiveTab(item.name)}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  className='flex flex-col items-center gap-0.5 px-2 py-1.5 relative group flex-1'>
-                  {isActive && (
-                    <motion.div
-                      layoutId='activeTab'
-                      className='absolute -top-2 left-1/2 -translate-x-1/2 w-6 h-1 bg-slate-800 dark:bg-white rounded-full'
-                      transition={{ duration: 0.3 }}></motion.div>
-                  )}
-                  <Icon className={`w-5 h-5 transition-all duration-300 ${isActive ? 'text-white' : 'text-slate-100'}`} />
-                  <span className={`max-[640px]:text-xs text-[14px] font-medium transition-all duration-300
-                    ${isActive
-                      ? 'text-white'
-                      : 'text-slate-100 group-hover:text-white'
-                    }`}>
-                    {item.name}
-                  </span>
-                </motion.a>
-              )
-            })}
-          </div>
         </div>
+
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0, y: -20 }}
+              animate={{ opacity: 1, height: "auto", y: 0 }}
+              exit={{ opacity: 0, height: 0, y: -20 }}
+              transition={{ duration: 0.3, ease: 'easeInOut' }}
+              className='md:hidden overflow-hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-700'
+            >
+              <div className='flex flex-col gap-3'>
+                {navItems.map((item, index) => (
+                  <motion.a
+                    key={item.name}
+                    href={item.link}
+                    onClick={() => setIsOpen(false)}
+                    initial={{ opacity: 0, x: -20}}
+                    animate={{ opacity: 1, x: 0}}
+                    transition={{ delay: index * 0.05 }}
+                    className='text-center py-3 rounded-xl text-gray-700 dark:text-gray-300 hover:bg-slate-50 dark:hover:bg-slate-900/20 hover:text-yellow-600 dark:hover:text-yellow-400 transition-all font-medium'
+                  >
+                    {item.name}
+                  </motion.a>
+                ))}
+              </div>
+
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.nav>
     </div>
   )
