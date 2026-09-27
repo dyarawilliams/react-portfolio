@@ -58,14 +58,14 @@ const Hero = () => {
                 href={CV}
                 target='_blank'
                 rel='noreferrer'
-                className='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full text-white dark:text-white font-semibold bg-linear-to-r from-slate-700 via-[#203584] to-slate-900 hover:shadow-[0_0_40px_rgba(234,179,8,0.7)] transition-all duration-300 transform hover:scale-105 border border-slate-600'
+                className='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full text-white font-semibold bg-linear-to-r from-yellow-600 via-amber-600 to-yellow-700 hover:shadow-[0_0_40px_rgba(234,179,8,0.45)] transition-all duration-300 transform hover:scale-105 border border-yellow-500/50'
               >
                 <Eye size={18} />
                 View Resume
               </a>
               <a
                 href='#contact'
-                className='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full border-2 border-slate-700 bg-slate-100/80 text-gray-800 dark:border-slate-500 dark:bg-slate-800/60 dark:text-slate-100 dark:hover:bg-slate-700 hover:bg-slate-200 hover:shadow-[0_0_40px_rgba(234,179,8,0.7)] transition-all duration-300 transform hover:scale-105 font-semibold'
+                className='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full border-2 border-slate-300 bg-white/80 text-slate-800 dark:border-slate-600 dark:bg-slate-900/60 dark:text-slate-100 dark:hover:bg-slate-800 hover:bg-slate-100 hover:shadow-[0_0_40px_rgba(234,179,8,0.35)] transition-all duration-300 transform hover:scale-105 font-semibold'
               >
                 <Mail size={18} />
                 Hire Me

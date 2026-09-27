@@ -102,18 +102,18 @@ const Projects = () => {
                         </h2>
                     </div>
                     <div className='flex gap-4'>
-                        <button onClick={() => handleScroll('left')} className='p-3 rounded-full border-2 transition-all duration-300 dark:border-zinc-200 border-gray-800 dark:text-white text-gray-800 hover:border-yellow-500 dark:hover:border-yellow-500 hover:bg-yellow-500/10 dark:hover:bg-yellow-500/10'>
+                        <button onClick={() => handleScroll('left')} className='p-3 rounded-full border-2 transition-all duration-300 dark:border-slate-600 border-slate-300 dark:text-slate-100 text-slate-800 hover:border-yellow-500 dark:hover:border-yellow-500 hover:bg-yellow-500/10 dark:hover:bg-yellow-500/10'>
                             <ChevronLeft size={22} />
                         </button>
-                        <button onClick={() => handleScroll('right')} className='p-3 rounded-full border-2 transition-all duration-300 dark:border-zinc-200 border-gray-800 dark:text-white text-gray-800 hover:border-yellow-500 dark:hover:border-yellow-500 hover:bg-yellow-500/10 dark:hover:bg-yellow-500/10'>
+                        <button onClick={() => handleScroll('right')} className='p-3 rounded-full border-2 transition-all duration-300 dark:border-slate-600 border-slate-300 dark:text-slate-100 text-slate-800 hover:border-yellow-500 dark:hover:border-yellow-500 hover:bg-yellow-500/10 dark:hover:bg-yellow-500/10'>
                             <ChevronRight size={22} />
                         </button>
                     </div>
                 </div>
                 <div ref={scrollRef} className='flex gap-6 scrollbar-none snap-mandatory overflow-hidden w-full px-4'>
                     {infiniteProjects.map((project, index) => (
-                        <div key={`${project.id}-${index}`} className='w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 snap-start group rounded-3xl overflow-hidden border-2 transition-all duration-300 dark:border-zinc-800/60 border-gray-100 dark:bg-zinc-900/40 bg-white hover:border-yellow-500/50 dark:hover:border-yellow-500/50 hover:shadow-[0_20px_40px_rgba(234,179,8,0.15)] flex flex-col'>
-                            <div className='relative overflow-hidden aspect-video bg-gray-100 dark:bg-zinc-900'>
+                        <div key={`${project.id}-${index}`} className='w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 snap-start group rounded-3xl overflow-hidden border-2 transition-all duration-300 dark:border-slate-700/80 border-slate-200 dark:bg-slate-900/60 bg-white hover:border-yellow-500/50 dark:hover:border-yellow-500/50 hover:shadow-[0_20px_40px_rgba(234,179,8,0.15)] flex flex-col'>
+                            <div className='relative overflow-hidden aspect-video bg-slate-100 dark:bg-slate-900'>
 
                                 <img src={project.image} alt={project.title} className='w-full h-full oject-cover transition-transform duration-500 group-hover:scale-105' />
 
@@ -138,9 +138,9 @@ const Projects = () => {
                                         ))}
                                     </div>
                                 </div>
-                                <div className='flex items-center gap-4 pt-2 border-t dark:border-zinc-800/80 border-gray-100'>
-                                    <a href={project.codeLink} target='_blank' rel='noopener noreferrer' className='inline-flex items-center gap-1.5 text-xs font-medium transition-colors duration-300 dark:text-gray-400 text-gray-600 dark:hover:text-white hover:text-black'><FaGithub size={14} /> Code</a>
-                                    <a href={project.demoLink} target='_blank' rel='noopener noreferrer' className='inline-flex items-center gap-1.5 text-xs font-medium transition-colors duration-300 dark:text-gray-400 text-gray-600 dark:hover:text-white hover:text-black'><ExternalLink size={14} /> View Demo</a>
+                                <div className='flex items-center gap-4 pt-2 border-t dark:border-slate-700/80 border-slate-200'>
+                                    <a href={project.codeLink} target='_blank' rel='noopener noreferrer' className='inline-flex items-center gap-1.5 text-xs font-medium transition-colors duration-300 dark:text-slate-400 text-slate-600 dark:hover:text-slate-100 hover:text-slate-900'><FaGithub size={14} /> Code</a>
+                                    <a href={project.demoLink} target='_blank' rel='noopener noreferrer' className='inline-flex items-center gap-1.5 text-xs font-medium transition-colors duration-300 dark:text-slate-400 text-slate-600 dark:hover:text-slate-100 hover:text-slate-900'><ExternalLink size={14} /> View Demo</a>
                                 </div>
                             </div>
                         </div>

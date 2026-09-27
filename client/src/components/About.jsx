@@ -71,7 +71,7 @@ const About = () => {
                         data-aos-delay='300'
                         target='_blank'
                         rel='noreferrer'
-                        className='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full text-white font-semibold bg-linear-to-r from-slate-600 via-[#203584] to-slate-800 hover:shadow-[0_0_40px_rgba(234,179,8,0.7)] transition-all duration-300 transform hover:scale-105'
+                        className='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full text-white font-semibold bg-linear-to-r from-yellow-600 via-amber-600 to-yellow-700 hover:shadow-[0_0_40px_rgba(234,179,8,0.45)] transition-all duration-300 transform hover:scale-105'
                     >
                         Let's Talk
                         <ArrowRight size={18} />

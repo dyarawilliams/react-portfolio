@@ -33,8 +33,8 @@ const App = () => {
   return (
     <div className={
       darkMode
-        ? 'bg-linear-to-br from-slate-950 via-[#0f172a] to-slate-900 min-h-screen text-slate-100 transition-colors duration-300'
-        : 'bg-linear-to-br from-slate-50 via-white to-slate-100 min-h-screen text-slate-900 transition-colors duration-300'
+        ? 'bg-slate-950 min-h-screen text-slate-100 transition-colors duration-300'
+        : 'bg-slate-50 min-h-screen text-slate-900 transition-colors duration-300'
     }>
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Hero />

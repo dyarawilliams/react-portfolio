@@ -83,12 +83,12 @@ const Certificates = () => {
                             initial='hidden'
                             whileInView='visible'
                             viewport={{ once: true, margin: '-100px' }}
-                            className='grid grid-cols-1 border-t border-b border-gray-200/50 dark:border-zinc-800/50 w-full'>
+                            className='grid grid-cols-1 border-t border-b border-slate-200/70 dark:border-slate-700/70 w-full'>
                             {certificate.map((cert, index) => (
                                 <motion.div
                                     key={cert.id}
                                     variants={itemVariants}
-                                    className={`p-3 sm:p-4 flex flex-col justify-between group relative transition-colors duration-300 hover:bg-slate-500/5 dark:hover:bg-slate-500/10 ${index < certificate.length - 1 ? 'border-b' : ''} border-gray-200/50 dark: border-zinc-800/50`}>
+                                    className={`p-3 sm:p-4 flex flex-col justify-between group relative transition-colors duration-300 hover:bg-slate-100/70 dark:hover:bg-slate-800/60 ${index < certificate.length - 1 ? 'border-b' : ''} border-slate-200/70 dark:border-slate-700/70`}>
                                         <div className='flex flex-col sm:flex-row sm:items-center justify-between gap-3'>
                                             <div className='flex items-start gap-3'>
                                                 <div className='p-2 rounded-xl bg-slate-50/10 text-yellow-600 dark:text-yellow-400 group-hover:scale-110 transition-transform duration-300 shrink-0'>
@@ -96,12 +96,12 @@ const Certificates = () => {
                                                 </div>
                                                 <div>
                                                     <h3 className='font-bold dark:text-white text-gray-900 group=hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors'>{cert.title}</h3>
-                                                    <span className='text-sm font-medium text-gray-600 dark:text-zinc-400 block mt-0.5'>{cert.issuer}</span>
+                                                    <span className='text-sm font-medium text-slate-600 dark:text-slate-400 block mt-0.5'>{cert.issuer}</span>
                                                 </div>
                                             </div>
                                         
                                         <div className='flex items-center justify-between sm:flex-col sm:items-end gap-1.5 shrink-0 max-sm:border-t max-sm:border-gray-100/50 max-sm:dark:border-zinc-700/30'>
-                                            <div className='flex items-center gap-1.5 text-xs font-mono text-gray-500 dark:text-zinc-400'>
+                                            <div className='flex items-center gap-1.5 text-xs font-mono text-slate-500 dark:text-slate-400'>
                                                 <Calendar size={13} />
                                                 <span>{cert.date}</span>
                                             </div>
