@@ -34,7 +34,7 @@ const App = () => {
     <div className={
       darkMode
         ? 'bg-slate-950 min-h-screen text-slate-100 transition-colors duration-300'
-        : 'bg-slate-50 min-h-screen text-slate-900 transition-colors duration-300'
+        : 'bg-slate-200 min-h-screen text-slate-900 transition-colors duration-300'
     }>
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Hero />
