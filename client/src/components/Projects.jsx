@@ -16,10 +16,10 @@ const Projects = () => {
             id: 1,
             image: project1,
             title: 'MemoraFind',
-            desc: 'A REST API book directory that allows you to create and search for a book/author.',
-            tags: ['NodeJS', 'ExpressJS', 'CSS3', 'MongoDB'],
-            codeLink: 'https://github.com/dyarawilliams/book-up',
-            demoLink: 'https://bookup.onrender.com/'
+            desc: 'A community-focused grave finder for Bamberg County, helping families and genealogy researchers search cemetery records and view individual memorial pages.',
+            tags: ['JavaScript', 'Python', 'HTML', 'CSS', 'Node.js', 'Express', 'EJS', 'Netlify Functions', 'Supabase', 'BeautifulSoup'],
+            codeLink: 'https://github.com/dyarawilliams/MemoraFind',
+            demoLink: 'https://memorafind.com/'
 
         },
         {
