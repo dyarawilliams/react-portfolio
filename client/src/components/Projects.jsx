@@ -3,8 +3,8 @@ import project1 from '../assets/project1.png'
 import project2 from '../assets/project2.png'
 import project3 from '../assets/project3.png'
 import project4 from '../assets/project4.png'
-// import project5 from '../assets/project5.png'
-// import project6 from '../assets/project6.png'
+import project5 from '../assets/project5.png'
+import project6 from '../assets/project6.png'
 import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react'
 import { FaGithub } from 'react-icons/fa'
 
@@ -15,7 +15,7 @@ const Projects = () => {
         {
             id: 1,
             image: project1,
-            title: 'Bookup',
+            title: 'MemoraFind',
             desc: 'A REST API book directory that allows you to create and search for a book/author.',
             tags: ['NodeJS', 'ExpressJS', 'CSS3', 'MongoDB'],
             codeLink: 'https://github.com/dyarawilliams/book-up',
@@ -25,6 +25,26 @@ const Projects = () => {
         {
             id: 2,
             image: project2,
+            title: 'Carolina CNA Ready',
+            desc: 'An AI-powered South Carolina CNA certification companion with a personalized roadmap, handbook-grounded coaching, skills rehearsal, and test-day readiness tools.',
+            tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Node.js', 'Express', 'Gemini API', 'Ollama'],
+            codeLink: 'https://github.com/dyarawilliams/carolina-cna-ready',
+            demoLink: 'https://carolina-cna-ready.ai.studio/'
+
+        },
+        {
+            id: 3,
+            image: project3,
+            title: 'Bookup',
+            desc: 'A REST API book directory that allows you to create and search for a book/author.',
+            tags: ['NodeJS', 'ExpressJS', 'CSS3', 'MongoDB'],
+            codeLink: 'https://github.com/dyarawilliams/book-up',
+            demoLink: 'https://bookup.onrender.com/'
+
+        },
+        {
+            id: 4,
+            image: project4,
             title: 'Study Buddy',
             desc: 'Keeps track of your study notes that allows you see all your assignments and deadlines in a single place.',
             tags: ['NodeJS', 'ExpressJS', 'CSS3', 'MongoDB'],
@@ -32,8 +52,8 @@ const Projects = () => {
             demoLink: 'https://thestudybuddy.onrender.com/'
         },
         {
-            id: 3,
-            image: project3,
+            id: 5,
+            image: project5,
             title: 'Jane',
             desc: 'A modern website fully responsive that mimics deployment for web apps of all kinds.',
             tags: ['HTML5', 'CSS3', 'JavaScript'],
@@ -41,30 +61,14 @@ const Projects = () => {
             demoLink: 'http://modernweb-jane.netlify.app/'
         },
         {
-            id: 4,
-            image: project4,
+            id: 6,
+            image: project6,
             title: 'JavaScript30',
             desc: 'Progress on the JavaScript30 challenge organized by WesBos.',
             tags: ['HTML5', 'CSS3', 'JavaScript'],
             codeLink: 'http://github.com/dyarawilliams/JavaScript30',
             demoLink: 'http://dyarawilliams.github.io/JavaScript30/'
         },
-        // {
-        //     id: 5,
-        //     image: project5,
-        //     title: 'Project 1',
-        //     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        //     tags: ['ReactJS', 'TailwindCSS', 'Framer Motion'],
-
-        // },
-        // {
-        //     id: 6,
-        //     image: project6,
-        //     title: 'Jane',
-        //     desc: 'A modern website fully responsive that mimics deployment for web apps of all kinds.',
-        //     tags: ['HTML5', 'CSS3', 'JavaScript'],
-
-        // },
     ]
 
     const infiniteProjects = [...projectsData, ...projectsData, ...projectsData]
